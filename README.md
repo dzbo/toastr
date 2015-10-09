@@ -1,4 +1,4 @@
-# toastr
+# toastr with Font Awesome
 **toastr** is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.
 
 [![Build Status](https://travis-ci.org/CodeSeven/toastr.svg)](https://travis-ci.org/CodeSeven/toastr)
@@ -18,9 +18,9 @@ Toastr is hosted at CDN JS
 - [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css)
 
 #### Minified
-- [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js) 
+- [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js)
 - [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css)
- 
+
 ## Install
 
 #### [NuGet Gallery](http://nuget.org/packages/toastr)
@@ -42,10 +42,10 @@ npm install --save toastr
 [Wiki including Change Log](https://github.com/CodeSeven/toastr/wiki)
 
 ## Breaking Changes
- 
+
 ####Animation Changes
 The following animations options have been deprecated and should be replaced:
- 
+
  - Replace `options.fadeIn` with `options.showDuration`
  - Replace `options.onFadeIn` with `options.onShown`
  - Replace `options.fadeOut` with `options.hideDuration`
@@ -98,7 +98,7 @@ Optionally enable a close button
 toastr.options.closeButton = true;
 ````
 
-Optionally override the close button's HTML. 
+Optionally override the close button's HTML.
 
 ```js
 toastr.options.closeHtml = '<button><i class="icon-off"></i></button>';
@@ -151,7 +151,7 @@ toastr.options.showMethod = 'slideDown';
 toastr.options.hideMethod = 'slideUp';
 toastr.options.closeMethod = 'slideUp';
 ```
-	
+
 ###Prevent Duplicates
 Rather than having identical toasts stack, set the preventDuplicates property to true. Duplicates are matched to the previous toast based on their message content.
 ```js
@@ -164,7 +164,7 @@ Control how toastr interacts with users by setting timeouts appropriately. Timeo
 toastr.options.timeOut = 30; // How long the toast will display without user interaction
 toastr.options.extendedTimeOut = 60; // How long the toast will display after a user hovers over it
 ```
-	
+
 
 ###Progress Bar
 Visually indicate how long before a toast expires.
