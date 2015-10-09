@@ -11,7 +11,7 @@
  * Project: https://github.com/CodeSeven/toastr
  */
 /* global define */
-(function (define) {
+; (function (define) {
     define(['jquery'], function ($) {
         return (function () {
             var $container;
@@ -173,12 +173,12 @@
 
                     extendedTimeOut: 1000,
                     iconClasses: {
-                        error: 'toast-error',
-                        info: 'toast-info',
-                        success: 'toast-success',
-                        warning: 'toast-warning'
+                        error: 'fa fa-times',
+                        info: 'fa fa-info',
+                        success: 'fa fa-check',
+                        warning: 'fa fa-exclamation-triangle'
                     },
-                    iconClass: 'toast-info',
+                    iconClass: 'fa fa-info',
                     positionClass: 'toast-top-right',
                     timeOut: 5000, // Set timeOut and extendedTimeOut to 0 to make it sticky
                     titleClass: 'toast-title',
@@ -215,6 +215,7 @@
                 var intervalId = null;
                 var $toastElement = $('<div/>');
                 var $titleElement = $('<div/>');
+                var $iconElement = $('<i/>');
                 var $messageElement = $('<div/>');
                 var $progressElement = $('<div/>');
                 var $closeElement = $(options.closeHtml);
@@ -230,6 +231,7 @@
                     options: options,
                     map: map
                 };
+                var type = map.type;
 
                 personalizeToast();
 
@@ -310,7 +312,8 @@
 
                 function setIcon() {
                     if (map.iconClass) {
-                        $toastElement.addClass(options.toastClass).addClass(iconClass);
+                        $toastElement.addClass(options.toastClass).addClass(`toast-${ type }`);
+                        $toastElement.append($iconElement.addClass(iconClass));
                     }
                 }
 
