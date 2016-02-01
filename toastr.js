@@ -312,7 +312,7 @@
 
                 function setIcon() {
                     if (map.iconClass) {
-                        $toastElement.addClass(options.toastClass).addClass(`toast-${ type }`);
+                        $toastElement.addClass(options.toastClass).addClass('toast-' + type);
                         $toastElement.append($iconElement.addClass(iconClass));
                     }
                 }
